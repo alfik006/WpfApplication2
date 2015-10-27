@@ -5,10 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="SMS" Height="281.25" Width="165.625">
-    <Grid>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="92" Margin="47,83,0,0" VerticalAlignment="Top" Width="87"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        Title="SMS" Height="242" Width="308.953">
+    <Grid Margin="0,0,-3,4" Background="LightBlue">
+
+
+
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="125" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="15,35,0,0"/>
+        <Button x:Name="bSMS" Content="Send SMS" HorizontalAlignment="Left" Height="25" Margin="110,170,0,0" VerticalAlignment="Top" Width="65" Click="SMS_Click"/>
+        <Button x:Name="bCancel" Content="Cancel" HorizontalAlignment="Left" Height="25" Margin="210,170,0,0" VerticalAlignment="Top" Width="65" Click="Cancel_Click"/>
+        <Button x:Name="bBackspace" Content="Delete" HorizontalAlignment="Left" Height="25" Margin="15,170,0,0" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="label1" Content="To:" HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtPhone_W1" HorizontalAlignment="Left" Height="23" Margin="60,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

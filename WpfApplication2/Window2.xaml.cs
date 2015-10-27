@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApplication2
 {
     /// <summary>
-    /// Interaktionslogik für Window1.xaml
+    /// Interaction logic for Window2.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window2 : Window
     {
-        public Window1()
+        public Window2()
         {
             InitializeComponent();
         }
@@ -31,9 +31,9 @@ namespace WpfApplication2
             Hide();
         }
 
-        private void SMS_Click(object sender, RoutedEventArgs e)
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("SMS ist sent.");
+            MessageBox.Show("The contact is saved.");
         }
     }
 }

@@ -25,10 +25,40 @@ namespace WpfApplication2
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+    
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 W2 = new Window2();
+            W2.txtPhone_W2.Text = txtPhone.Text;
+            W2.Show();
+            Hide();
+        }
+
+        private void numbers_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            textBox.Text = textBox.Text + (string)button.Content;
+            txtPhone.Text = txtPhone.Text + (string)button.Content;
         }
+
+        private void SMS_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 W1 = new Window1();
+            W1.txtPhone_W1.Text = txtPhone.Text;
+            W1.Show();
+            Hide();
+
+        }
+
+       
+        private void Call_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Call");
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
     }
 }
