@@ -60,5 +60,15 @@ namespace WpfApplication2
             Close();
         }
 
+        private void bBackspace_Click(object sender, RoutedEventArgs e)
+        {
+
+            string newText = txtPhone.Text;
+
+            if (newText.Length>0) newText = newText.Substring(0, newText.Length -1);
+
+            txtPhone.Text = newText;
+
+        }
     }
 }

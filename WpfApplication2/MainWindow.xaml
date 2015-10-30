@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
         Title="VoIP (Voice over IP)" Height="309" Width="189">
-    <Grid Margin="0,-3,0,-1" HorizontalAlignment="Left" Width="174">
+    <Grid Name="raster" Margin="0,-3,0,-1" HorizontalAlignment="Left" Width="174">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="0*"/>
@@ -27,10 +27,10 @@
 
         <TextBox x:Name="txtPhone" FontSize="15" Margin="15,35,59,5"/>
 
-        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="16,5,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="16,5,0,0" VerticalAlignment="Top" Width="35"  Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2"/>
         <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Margin="70,5,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2"/>
         <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="121,5,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2"/>
-        <Button x:Name="bBackspace" Content="Del" HorizontalAlignment="Left" Margin="125,35,0,0" VerticalAlignment="Top" Width="30" Height="25" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17"/>
+        <Button x:Name="bBackspace" Content="Del" HorizontalAlignment="Left" Margin="125,35,0,0" VerticalAlignment="Top" Width="30" Height="25" RenderTransformOrigin="0,0.4" Click="bBackspace_Click" FontSize="17"/>
         <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Margin="16,47,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2"/>
         <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="70,47,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2" />
         <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="121,47,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2"/>
