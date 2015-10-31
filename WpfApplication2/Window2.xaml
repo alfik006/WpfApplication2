@@ -50,7 +50,7 @@
             <Button Content="_Save" Height="30" FontSize="17" Margin="50,255,124,12" Click="Save_Click"/>
         </Viewbox>
         <Viewbox>
-            <Button Content="Cancel" Height="30" FontSize="17" Margin="150,255,24,12" Click="Cancel_Click"/>
+            <Button Height="30" FontSize="17" Margin="150,255,24,12" Click="Cancel_Click">Cance_l</Button>
         </Viewbox>
 
     </Grid>

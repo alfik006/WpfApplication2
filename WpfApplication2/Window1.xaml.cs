@@ -35,5 +35,19 @@ namespace WpfApplication2
         {
             MessageBox.Show("SMS ist sent.");
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void bBackspace_Click(object sender, RoutedEventArgs e)
+        {
+            string newText = txt_SMS.Text;
+
+            if (newText.Length > 0) newText = newText.Substring(0, newText.Length - 1);
+
+            txt_SMS.Text = newText;
+        }
     }
 }

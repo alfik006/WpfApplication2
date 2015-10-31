@@ -10,10 +10,10 @@
 
 
 
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="125" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="15,35,0,0"/>
-        <Button x:Name="bSMS" Content="Send SMS" HorizontalAlignment="Left" Height="25" Margin="110,170,0,0" VerticalAlignment="Top" Width="65" Click="SMS_Click"/>
-        <Button x:Name="bCancel" Content="Cancel" HorizontalAlignment="Left" Height="25" Margin="210,170,0,0" VerticalAlignment="Top" Width="65" Click="Cancel_Click"/>
-        <Button x:Name="bBackspace" Content="Delete" HorizontalAlignment="Left" Height="25" Margin="15,170,0,0" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="txt_SMS" HorizontalAlignment="Left" Height="125" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Margin="15,35,0,0"/>
+        <Button x:Name="bSMS" HorizontalAlignment="Left" Height="25" Margin="110,170,0,0" VerticalAlignment="Top" Width="65" Click="SMS_Click">Send S_MS</Button>
+        <Button x:Name="bCancel" HorizontalAlignment="Left" Height="25" Margin="210,170,0,0" VerticalAlignment="Top" Width="65" Click="Cancel_Click">Cance_l</Button>
+        <Button x:Name="bBackspace" HorizontalAlignment="Left" Height="25" Margin="15,170,0,0" VerticalAlignment="Top" Width="60" Click="bBackspace_Click">_Delete</Button>
         <Label x:Name="label1" Content="To:" HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtPhone_W1" HorizontalAlignment="Left" Height="23" Margin="60,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 

@@ -32,6 +32,7 @@ namespace WpfApplication2
             W2.txtPhone_W2.Text = txtPhone.Text;
             W2.Show();
             Hide();
+           
         }
 
         private void numbers_Click(object sender, RoutedEventArgs e)
@@ -49,10 +50,9 @@ namespace WpfApplication2
 
         }
 
-       
         private void Call_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Call");
+            Call_sound.Play();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
