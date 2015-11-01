@@ -5,47 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="VoIP (Voice over IP)" Height="309" Width="189">
-    <Grid Name="raster" Margin="0,-3,0,-1" HorizontalAlignment="Left" Width="174">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        Title="VoIP (Voice over IP)" Height="420" Width="210" Name="windowframe" SizeChanged="windowframe_SizeChanged">
+    <Grid Name="raster" Margin="0,-3,0,-1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="{Binding ActualWidth, ElementName=windowframe}" Height="{Binding ActualHeight, ElementName=windowframe}">
         <DockPanel Margin="1,2,-1,40">
             <Menu Margin="-5,0,-7,-20" Height="20" VerticalAlignment="Top">
                 <MenuItem Header="_File" Height="20" Width="30">
                     <MenuItem Header = "_Save" Click="Save_Click" InputGestureText="ALT+S"/>
                     <MenuItem Header = "_Call" Click="Call_Click" InputGestureText="ALT+C"/>
-                    <MenuItem Header = "Send S_MS" Click="SMS_Click" InputGestureText="ALT+M"/>
+                    <MenuItem Header = "_Text" Click="SMS_Click" InputGestureText="ALT+T"/>
                     <Separator />
-                    <MenuItem Header="E_xit" Click="Exit_Click" InputGestureText="ALT+X"/>
+                    <MenuItem Header="_Exit" Click="Exit_Click"/>
                 </MenuItem>
                 <MenuItem Header="_Help" Height="20" Width="40"/>
             </Menu>
         </DockPanel>
 
-        <TextBox x:Name="txtPhone" FontSize="15" Margin="15,35,59,5"/>
+        <Button x:Name="tmp" Content="" HorizontalAlignment="Left" Visibility="Hidden" Margin="0,20,0,0" VerticalAlignment="Top" Width="40"  Height="40" FontSize="17" />
 
-        <Button x:Name="button1" HorizontalAlignment="Left" Margin="16,5,0,0" VerticalAlignment="Top" Width="35"  Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">1</Button>
-        <Button x:Name="button2" HorizontalAlignment="Left" Margin="70,5,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">2</Button>
-        <Button x:Name="button3" HorizontalAlignment="Left" Margin="121,5,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">3</Button>
-        <Button x:Name="bBackspace" HorizontalAlignment="Left" Margin="125,35,0,0" VerticalAlignment="Top" Width="30" Height="25" RenderTransformOrigin="0,0.4" Click="bBackspace_Click" FontSize="17">_Del</Button>
-        <Button x:Name="button4" HorizontalAlignment="Left" Margin="16,47,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">4</Button>
-        <Button x:Name="button5" HorizontalAlignment="Left" Margin="70,47,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">5</Button>
-        <Button x:Name="button6" HorizontalAlignment="Left" Margin="121,47,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">6</Button>
-        <Button x:Name="button7" HorizontalAlignment="Left" Margin="16,88,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">7</Button>
-        <Button x:Name="button8" HorizontalAlignment="Left" Margin="70,88,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">8</Button>
-        <Button x:Name="button9" HorizontalAlignment="Left" Margin="121,88,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">9</Button>
-        <Button x:Name="bStern" HorizontalAlignment="Left" Margin="16,130,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">*</Button>
-        <Button x:Name="button0" HorizontalAlignment="Left" Margin="70,130,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">0</Button>
-        <Button x:Name="bHashtag1" HorizontalAlignment="Left" Margin="121,130,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="17" Grid.Row="1" Grid.RowSpan="2">#</Button>
-        <Button x:Name="bSave" HorizontalAlignment="Left" Margin="16,170,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="Save_Click" FontSize="14" Grid.Row="1" Grid.RowSpan="2">_Save</Button>
-        <Button x:Name="bCall" HorizontalAlignment="Left" Margin="70,170,0,0" VerticalAlignment="Top" Width="35" Height="30" RenderTransformOrigin="0,0.4" Click="Call_Click" FontSize="14" Grid.Row="1" Grid.RowSpan="2">_Call</Button>
-        <Button x:Name="bSMS" HorizontalAlignment="Left" Margin="121,170,0,0" VerticalAlignment="Top" Width="34" Height="30" RenderTransformOrigin="0,0.4" Click="SMS_Click" FontSize="14" Grid.Row="1" Grid.RowSpan="2">S_MS</Button>
+        <TextBox x:Name="txtPhone" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,40,0,0" Width="100" Height="{Binding ActualHeight, ElementName=tmp}"/>
+        <Button x:Name="bBackspace" Content="Del" HorizontalAlignment="Left" Margin="140,40,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="bBackspace_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
 
+        <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Margin="80,100,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
+        <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="140,100,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Margin="20,160,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="80,160,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="140,160,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
+        <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Margin="20,220,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
+        <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Margin="80,220,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
+        <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Margin="140,220,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
+        <Button x:Name="bStern" Content="*" HorizontalAlignment="Left" Margin="20,280,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="button0" Content="0" HorizontalAlignment="Left" Margin="80,280,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" RenderTransformOrigin="0,0.4" Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="bHashtag1" Content="#" HorizontalAlignment="Left" Margin="140,280,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="bSave" Content="Save" HorizontalAlignment="Left" Margin="20,340,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="Save_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="bCall" Content="Call" HorizontalAlignment="Left" Margin="80,340,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"  Click="Call_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
+        <Button x:Name="bSMS" Content="SMS" HorizontalAlignment="Left" Margin="140,340,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="SMS_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
 
-        <MediaElement Source="Anruf.mp3" LoadedBehavior="Manual" Name="Call_sound" Volume="1"></MediaElement>
+        <MediaElement Source="Anruf.mp3" LoadedBehavior="Manual" Name="Call_sound" Volume="1" Margin="0,0,184,400"></MediaElement>
     </Grid>
 
 </Window>
