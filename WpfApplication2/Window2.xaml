@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="Saving Contact" Height="330" Width="280" Name="windowframe" SizeChanged="windowframe_SizeChanged" FontSize="{Binding Fontsize, ElementName=windowframe}">
+        Title="Saving Contact" Height="330" Width="280" Name="windowframe" SizeChanged="windowframe_SizeChanged" FontSize="17">
     <Grid RenderTransformOrigin="0.463,0.223" Margin="0,0,2,-1">
         <Grid.RowDefinitions>
             <RowDefinition/>

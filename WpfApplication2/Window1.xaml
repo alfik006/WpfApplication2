@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="SMS" Height="250" Width="310" Name="windowframe" SizeChanged="windowframe_SizeChanged">
-    <Grid Margin="0,0,-3,4" Background="LightBlue">
+        Title="SMS" Height="250" Width="350" Name="windowframe" SizeChanged="windowframe_SizeChanged">
+    <Grid Margin="0,0,0,0" Background="LightBlue" Width="{Binding ActualWidth, ElementName=windowframe}" Height="{Binding ActualHeight, ElementName=windowframe}" VerticalAlignment="Top" HorizontalAlignment="Left">
 
-        <Button x:Name="tmp" Content="" HorizontalAlignment="Left" Visibility="Hidden" Margin="0,20,0,0" VerticalAlignment="Top" Width="65"  Height="25" FontSize="10" />
+        <Button x:Name="tmp" Content="" HorizontalAlignment="Left" Visibility="Hidden" Margin="0,20,0,0" VerticalAlignment="Top" Width="70"  Height="30" FontSize="10" />
 
-        <TextBox x:Name="txt_SMS" FontSize="{Binding FontSize, ElementName=tmp}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,40,0,0" Width="260" Height="110"/>
-        <Button x:Name="bSMS" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="110,170,0,0" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" Click="SMS_Click">Send S_MS</Button>
-        <Button x:Name="bCancel" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="210,170,0,0" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" Click="Cancel_Click">Cance_l</Button>
-        <Button x:Name="bBackspace" HorizontalAlignment="Left" Margin="15,170,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" Click="bBackspace_Click">_Delete</Button>
-        <Label x:Name="label1" Content="To:" HorizontalAlignment="Left" Margin="24,5,0,0" VerticalAlignment="Top" FontSize="{Binding FontSize, ElementName=tmp}"/>
-        <TextBox x:Name="txtPhone_W1" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="50,6,0,0" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" TextWrapping="Wrap"/>
+        <TextBox x:Name="txt_SMS" FontSize="{Binding FontSize, ElementName=tmp}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,50,0,0" Width="250" Height="100"/>
+        <Button x:Name="bSMS" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="110,160,0,0" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" Click="SMS_Click">Send S_MS</Button>
+        <Button x:Name="bCancel" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="210,160,0,0" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" Click="Cancel_Click">Cance_l</Button>
+        <Button x:Name="bBackspace" HorizontalAlignment="Left" Margin="20,160,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" Click="bBackspace_Click">_Delete</Button>
+        <Label x:Name="label1" Content="To:" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" FontSize="{Binding FontSize, ElementName=tmp}" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}"/>
+        <TextBox x:Name="txtPhone_W1" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="110,10,0,0" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" FontSize="{Binding FontSize, ElementName=tmp}" TextWrapping="Wrap"/>
 
     </Grid>
 </Window>

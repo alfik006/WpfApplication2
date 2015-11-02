@@ -53,36 +53,38 @@ namespace WpfApplication2
         private void windowframe_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             //Set dynamic object size
-            if (40 - (250 - windowframe.Height) > 0) tmp.Height = 30 - ((250 - windowframe.Height));
-            if (40 - (310 - windowframe.Width) > 0) tmp.Width = 60 - ((310 - windowframe.Width));
-            if (100 - (250 - windowframe.Height) > 0) txt_SMS.Width = 220 - ((310 - windowframe.Width));
-            if (100 - (250 - windowframe.Height) > 0) label1.Width = 220 - ((310 - windowframe.Width));
+            if (30 - (250 - windowframe.Height) > 0) tmp.Height = 30 - ((250 - windowframe.Height) / 3);
+            if (40 - (350 - windowframe.Width) > 0) tmp.Width = 40 - ((350 - windowframe.Width) / 3);
+            if (100 - (250 - windowframe.Height) > 0) txt_SMS.Width = 100 - ((250 - windowframe.Width) / 3);
+            if (250 - (350 - windowframe.Height) > 0) txt_SMS.Width = 250 - ((350 - windowframe.Width) / 3);
 
             //Set dynamic fontsize
-            if (tmp.Width > tmp.Height) tmp.FontSize = 17 * tmp.Height / 60;
-            else tmp.FontSize = 17 * tmp.Width / 60;
+            if (tmp.Width > tmp.Height) tmp.FontSize = 17 * tmp.Height / 70;
+            else tmp.FontSize = 17 * tmp.Width / 30;
 
-           //Set dynamic position on grid
-            Thickness margin = bBackspace.Margin;
-            Thickness margin2 = bBackspace.Margin;
-            Thickness margin3 = bBackspace.Margin;
+            //Set dynamic position on grid
+            Thickness margin = txtPhone_W1.Margin;
 
             //Head
-            margin.Top = 170;
-            margin.Left = 15;
+            margin.Top = 10;
+            margin.Left = 20 + label1.Width + 20;
+            txtPhone_W1.Margin = margin;
+
+            //SMS Window
+            margin.Left = 20;
+            margin.Top = 10 + tmp.Height + 10;
+            txt_SMS.Margin = margin;
+
+            //Key row
+            margin.Left = 20;
+            margin.Top = 3*10 + txt_SMS.Height + tmp.Height;
             bBackspace.Margin = margin;
 
-            margin.Top = 170;
-            margin.Left = 110;
+            margin.Left = 2*20 + tmp.Width;
             bSMS.Margin = margin;
 
-            margin.Top = 170;
-            margin.Left = 180;
+            margin.Left = 3*20 + 2*tmp.Width; ;
             bCancel.Margin = margin;
-
-            margin.Top = 6;
-            margin.Left = 50;
-            txtPhone_W1.Margin = margin;
 
         }
 
