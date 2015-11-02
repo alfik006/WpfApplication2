@@ -22,7 +22,7 @@
 
         <Button x:Name="tmp" Content="" HorizontalAlignment="Left" Visibility="Hidden" Margin="0,20,0,0" VerticalAlignment="Top" Width="40"  Height="40" FontSize="17" />
 
-        <TextBox x:Name="txtPhone" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,40,0,0" Width="100" Height="{Binding ActualHeight, ElementName=tmp}"/>
+        <TextBox x:Name="txtPhone" FontSize="{Binding FontSize, ElementName=tmp}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,40,0,0" Width="100" Height="{Binding ActualHeight, ElementName=tmp}"/>
         <Button x:Name="bBackspace" Content="Del" HorizontalAlignment="Left" Margin="140,40,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="bBackspace_Click" FontSize="{Binding FontSize, ElementName=tmp}"/>
 
         <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=tmp}" Height="{Binding ActualHeight, ElementName=tmp}" Click="numbers_Click" FontSize="{Binding FontSize, ElementName=tmp}" />
