@@ -35,5 +35,18 @@ namespace WpfApplication2
         {
             MessageBox.Show("The contact is saved.");
         }
+
+        private void windowframe_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            //Set dynamic object size
+            if (40 - (420 - windowframe.Height) > 0) tmp.Height = 40 - ((420 - windowframe.Height) / 6);
+            if (40 - (210 - windowframe.Width) > 0) tmp.Width = 40 - ((210 - windowframe.Width) / 3);
+
+            //Set dynamic fontsize
+            if (tmp.Width > tmp.Height) tmp.FontSize = 17 * tmp.Height / 40;
+            else tmp.FontSize = 17 * tmp.Width / 40;
+
+
+        }
     }
 }
