@@ -26,7 +26,7 @@
             <Label Content="_ZIP code:" Margin="5,130,184,137" Height="30" FontSize="14" Target="{Binding ElementName=txtZIP}"/>
         </Viewbox>
         <Viewbox>
-            <Label Content="_City:" Margin="10,170,194,97" Width="60" Height="30" FontSize="14" Target="{Binding ElementName=txtCity}"></Label>
+            <Label Content="Cit_y:" Margin="10,170,194,97" Width="60" Height="30" FontSize="14" Target="{Binding ElementName=txtCity}"></Label>
         </Viewbox>
         <Viewbox>
             <Label Content="_Email:" Margin="10,210,194,57" Width="60" Height="30" FontSize="14" Target="{Binding ElementName=txtEmail}"></Label>
@@ -55,6 +55,8 @@
         <Viewbox>
             <Button Height="30" FontSize="17" Margin="150,255,24,12" Click="Cancel_Click">Cance_l</Button>
         </Viewbox>
+
+        <MediaElement Source="Contact.mp3" LoadedBehavior="Manual" Name="Contact_sound" Volume="1" Margin="0,0,184,400"></MediaElement>
 
     </Grid>
 </Window>

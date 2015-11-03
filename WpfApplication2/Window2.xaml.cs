@@ -33,7 +33,7 @@ namespace WpfApplication2
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("The contact is saved.");
+            Contact_sound.Play();
         }
 
         private void windowframe_SizeChanged(object sender, SizeChangedEventArgs e)
