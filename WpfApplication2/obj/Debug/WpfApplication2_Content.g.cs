@@ -10,7 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("anruf.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("contact.mp3")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("numbers.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sms.mp3")]
 
 

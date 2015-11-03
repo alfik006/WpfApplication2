@@ -127,5 +127,4 @@ C:\Users\annel\Documents\GitHub\WpfApplication2\WpfApplication2\obj\Debug\WpfApp
 C:\Users\Elena\Documents\GitHub\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2_Content.g.cs
 C:\Users\Elena\Documents\GitHub\WpfApplication2\WpfApplication2\bin\Debug\Anruf.mp3
 C:\Users\Elena\Documents\GitHub\WpfApplication2\WpfApplication2\bin\Debug\Contact.mp3
-C:\Users\Elena\Documents\GitHub\WpfApplication2\WpfApplication2\bin\Debug\Numbers.mp3
 C:\Users\Elena\Documents\GitHub\WpfApplication2\WpfApplication2\bin\Debug\SMS.mp3

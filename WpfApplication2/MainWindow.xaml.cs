@@ -37,7 +37,6 @@ namespace WpfApplication2
 
         private void numbers_Click(object sender, RoutedEventArgs e)
         {
-            Numbers_sound.Play();
             Button button = (Button)sender;
             txtPhone.Text = txtPhone.Text + (string)button.Content;
         }
